@@ -69,10 +69,10 @@ input[type="radio"]:checked + label {
 /* ***********    GAME    ************** */
 
 .background {
-  background-image: url(/images/background.png);
+  background-image: url(images/background.png);
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: url(/images/cursor.png), default;
+  cursor: url(images/cursor.png), default;
   flex-wrap: wrap;
   width: 960px;
   height: 540px;
