@@ -182,7 +182,7 @@ function gameOver() {
 const getLeaving = (mole, moleImg) => {
   mole.next = getSadInterval();
   mole.status = 'leaving';
-  mole.king ? moleImg.src = '/images/king-mole-leaving.png' : moleImg.src = '/images/mole-leaving.png';
+  mole.king ? moleImg.src = 'images/king-mole-leaving.png' : moleImg.src = 'images/mole-leaving.png';
 }
 
 const getGone = (mole, moleImg) => {
@@ -198,7 +198,7 @@ const getHungry = (mole, moleImg) => {
   mole.next = getHungryInterval();
   moleImg.classList.remove('gone');
   moleImg.classList.add('hungry');
-  mole.king ? moleImg.src = '/images/king-mole-hungry.png' : moleImg.src = '/images/mole-hungry.png';
+  mole.king ? moleImg.src = 'images/king-mole-hungry.png' : moleImg.src = 'images/mole-hungry.png';
 }
 
 const getSad = (mole, moleImg) => {
@@ -206,7 +206,7 @@ const getSad = (mole, moleImg) => {
   mole.next = getSadInterval();
   moleImg.classList.remove('hungry');
   moleImg.parentNode.style.backgroundColor = 'gray';
-  mole.king ? moleImg.src = '/images/king-mole-sad.png' : moleImg.src = '/images/mole-sad.png';
+  mole.king ? moleImg.src = 'images/king-mole-sad.png' : moleImg.src = 'images/mole-sad.png';
 }
 
 function getNextStatus(mole) {
@@ -238,10 +238,10 @@ function feed(event) {
     mole.node.children[0].classList.remove('hungry');
     if (mole.king) {
       score += 2;
-      mole.node.children[0].src = '/images/king-mole-fed.png'
+      mole.node.children[0].src = 'images/king-mole-fed.png'
     } else {
       score++;
-      mole.node.children[0].src = '/images/mole-fed.png'
+      mole.node.children[0].src = 'images/mole-fed.png'
     }
 
     document.querySelector('.worm-container').style.width = `${score / finalScore * 100}%`
