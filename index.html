@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOLE GAME</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <nav>   
+    <div class="level">
+      <input type="radio" id="easy" name="level" value="easy" onchange="handleChange()" >
+      <label for="easy">easy</label><br>
+      <input type="radio" id="medium" name="level" value="medium" onchange="handleChange()"  checked>
+      <label for="medium">medium</label><br>
+      <input type="radio" id="hard" name="level" value="hard" onchange="handleChange()" >
+      <label for="hard">hard</label>
+    </div>
+    <button class="btn btn_start">start</button>
+    <button class="btn btn_instructions">instructions</button>
+  </nav>
+
+  <section class="background">
+    <div class="worm-box">
+      <div class="worm-container"  style="width: 5%">
+        <img class="worm" src="/images/worm.png" alt="worm score meter">
+      </div>
+    </div>
+
+    <div class="scores-container">
+      <p>scores: <span class="scores">0</span>/<span class="final_scores"></span></p>
+      <p>
+        Time left: <span class="time_left"></span> s
+      </p>
+    </div>
+
+    <div class="hole-container">
+      <div class="hole" id="hole-0">
+        <img data-index="0" src="/images/king-mole-hungry.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-1">
+        <img data-index="1" src="/images/king-mole-fed.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-2">
+        <img data-index="2" src="/images/king-mole-hungry.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-3">
+        <img data-index="3" src="/images/king-mole-sad.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-4">
+        <img data-index="4" src="/images/king-mole-leaving.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-5">
+        <img data-index="5" src="/images/mole-hungry.png" alt="mole" class="mole"></div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-6">
+        <img data-index="6" src="/images/mole-fed.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-7">
+        <img data-index="7" src="/images/mole-sad.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-8">
+        <img data-index="8" src="/images/mole-leaving.png" alt="mole" class="mole">
+      </div>
+    </div>
+    <div class="hole-container">
+      <div class="hole" id="hole-9">
+        <img data-index="9" src="/images/king-mole-hungry.png" alt="happy mole" class="mole">
+      </div>
+    </div>
+  </section>
+
+  <img class="win hide" src="images/win.png" alt="congratulations! you have won!">
+  
+  <div class="game-over_container hide">
+    <h3>GAME OVER! </h3>
+    <h4>You've fed <span class="user-scores"></span> of <span class="final-scores"></span> moles.</h4>
+    <img src="images/mole-sad.png">
+    <p>Try again to make them all happy</p>
+  </div>
+
+  <div class="instructions_container hide">
+    <p>Your goal is to feed moles until the indicator (big worm) gets full length.</p>
+    <p>Feed a mole when he appears hungry, but until gets sad and goes back to the hole.</p>
+    <p>Each fed mole worth 1 point, happy King mole will give you 2 points.</p>
+    <p>If you can't make it until the time is up - you lose and moles cry hungry :(</p>
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
