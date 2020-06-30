@@ -64,6 +64,12 @@ input[type="radio"]:checked + label {
  background-color: white;
 }
 
+.scores-container {
+  color: white;
+  font-size: 17px;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 
 /* ***********    GAME    ************** */
